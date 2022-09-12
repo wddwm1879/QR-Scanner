@@ -1,0 +1,153 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #111;
+}
+.qrcode
+{
+    width: 512px;
+    height: 512px;
+    position: relative;
+    background: url(qr1.png);
+    
+}
+.qrcode::before
+{
+    content: '';
+    position: absolute;
+    background: url(qr2.png);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    animation: qrcode 4s ease-in-out infinite;
+}
+@keyframes qrcode
+{
+    0%,100%
+    {
+        height: 0%;
+    }
+    50%
+    {
+        height: 100%;
+    }
+}
+.qrcode::after
+{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-color: limegreen;
+    top: 0;
+    left: 0;
+    animation: qrcodeLine 4s ease-in-out infinite;
+    filter: drop-shadow(0 0 20px limegreen)drop-shadow(0 0 50px limegreen)drop-shadow(0 0 100px limegreen);
+}
+@keyframes qrcodeLine
+{
+    0%,100%
+    {
+        top: 0%;
+    }
+    50%
+    {
+        top: 100%;
+    }
+}
+.scanner
+{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: url(scan.png);
+    left: 0;
+    top: 0;
+     animation: scanner 0.6s steps(1) infinite;
+}
+@keyframes scanner
+{
+    0%,100%
+    {
+        opacity: 0%;
+    }
+    50%
+    {
+        opacity: 100%;
+    }
+}
+h3
+{
+    font-size: 30px;
+    margin-left: 125px;
+    position: relative;
+    margin-top: 20px;
+    color: limegreen;
+    filter: drop-shadow(0 0 20px limegreen)drop-shadow(0 0 50px limegreen)drop-shadow(0 0 100px limegreen);
+animation: scanner 0.6s steps(1) infinite;
+}
+@keyframes scanner
+{
+    0%,100%
+    {
+        opacity: 0%;
+    }
+    50%
+    {
+        opacity: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
